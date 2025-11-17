@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Progetto Frontend</title>
+
+    <script>
+        (function() {
+            let currentTheme = localStorage.getItem('theme');
+            if (!currentTheme) {
+                currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+            document.documentElement.setAttribute('data-theme', currentTheme);
+        })();
+    </script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">TechCar</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">Informazioni</a></li>
+                    <li><a href="contact.html">Contatti</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" class="theme-switch">Tema</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero-slider-only">
+            <div class="slide active" style="background-image: url('images/hero-1.jpg');"></div>
+            <div class="slide" style="background-image: url('images/hero-2.jpg');"></div>
+            <div class="slide" style="background-image: url('images/hero-3.jpg');"></div>
+        </section>
+
+        <section id="hero-text-content">
+            <div class="container">
+                <h1>TechCar</h1>
+                <h2>L'innovazione che guida</h2>
+                <a href="contact.html" class="cta-button">Inizia Ora</a>
+            </div>
+        </section>
+
+        <section id="highlights">
+            <div class="container">
+                <h2>Le nostre competenze</h2>
+                
+                <div class="card-alternating">
+                    <div class="card-image-wrapper">
+                        <img src="images/card-1.jpg" alt="Progettazione" class="grayscale">
+                    </div>
+                    <div class="card-content">
+                        <h3>Progettazione</h3>
+                        <p>In questa fase trasformiamo le idee in realtà. Non progettiamo solo un'autoradio, ma il centro di comando della tua esperienza di guida. Il nostro team di ingegneri e designer UX/UI lavora per creare un'integrazione hardware che sembri originale di fabbrica e un'interfaccia software che sia intuitiva, reattiva e sicura da usare durante la guida. Ogni dettaglio, dalla sensibilità del touchscreen alla leggibilità del display sotto il sole, è studiato per un comfort ergonomico e visivo totale.</p>
+                    </div>
+                </div>
+
+                <div class="card-alternating reverse">
+                    <div class="card-image-wrapper">
+                        <img src="images/card-2.jpg" alt="Sviluppo" class="grayscale">
+                    </div>
+                    <div class="card-content">
+                        <h3>Sviluppo</h3>
+                        <p>È qui che l'innovazione prende forma. Il nostro team di sviluppo software costruisce sistemi operativi stabili, veloci e ottimizzati per un'integrazione perfetta con Apple CarPlay e Android Auto. Lavoriamo costantemente per garantire la massima compatibilità con i comandi al volante, le telecamere di retromarcia e i sistemi diagnostici (OBD) del veicolo. Sviluppare "smart" significa garantire performance fluide e affidabilità assoluta.</p>
+                    </div>
+                </div>
+
+                <div class="card-alternating">
+                    <div class="card-image-wrapper">
+                        <img src="images/card-3.png" alt="Strategia" class="grayscale">
+                    </div>
+                    <div class="card-content">
+                        <h3>Strategia</h3>
+                        <p>Guardiamo oltre la singola autoradio; guardiamo al futuro dell'auto connessa. La nostra strategia si concentra sull'anticipare le esigenze del guidatore moderno. Analizziamo le tendenze del mercato, investiamo in R&S (Ricerca e Sviluppo) e pianifichiamo una roadmap di prodotti che non solo siano al passo con i tempi, ma che definiscano nuovi standard. Il nostro obiettivo è costruire un ecosistema di accessori connessi, supportato da aggiornamenti software Over-the-Air (OTA) che mantengano il prodotto aggiornato e sicuro nel tempo.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 TechCar. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informazioni - Progetto Frontend</title>
+
+<script>
+    (function() {
+        let currentTheme = localStorage.getItem('theme');
+
+        if (!currentTheme) {
+            currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+
+        document.documentElement.setAttribute('data-theme', currentTheme);
+    })();
+</script>
+
+<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">TechCar</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">Informazioni</a></li>
+                    <li><a href="contact.html">Contatti</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" class="theme-switch">Tema</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="page-header" class="about-header">
+            <div class="container layout-2-col">
+                <div class="col-text">
+                    <h1>Chi Siamo</h1> 
+                    <p>Siamo TechCar. Non ci limitiamo a costruire autoradio; re-immaginiamo l'esperienza di guida nell'era digitale. <br> La nostra missione è semplice: portare un'intelligenza fluida, intuitiva e connessa in ogni abitacolo. Crediamo che la tecnologia all'interno della tua auto debba essere potente quanto quella che tieni in tasca. Per questo, progettiamo sistemi di infotainment "smart" che colmano il divario tra la tua vita digitale e la tua guida, rendendo ogni viaggio più sicuro, efficiente e piacevole. <br> Siamo ingegneri, designer e appassionati di motori uniti dalla convinzione che un'interfaccia obsoleta non debba rovinare l'esperienza di un'auto moderna.</p> 
+                </div>
+                <div class="col-image">
+                    <img src="images/chi-siamo.jpg" class="grayscale page-image">
+                </div>
+            </div>
+        </section>
+
+        <section id="main-content">
+            <div class="container layout-2-col">
+                <div class="col-image">
+                    <img src="images/history.jpg" class="grayscale page-image">
+                </div>
+                <div class="col-text">
+                    <h2>La nostra storia</h2>
+                    <p>TechCar è nata da una frustrazione comune. Amiamo le auto, ma eravamo stanchi di sistemi di infotainment lenti, complicati e perennemente indietro rispetto alla velocità con cui si evolvevano gli smartphone. Vedevamo un'enorme disconnessione tra l'ingegneria meccanica di precisione delle auto e la loro "intelligenza" elettronica. <br>Ci siamo chiesti: "Perché l'autoradio non può essere reattiva, elegante e costantemente aggiornata come un telefono di ultima generazione?" <br>Da quella domanda, nel [Anno di fondazione], è nata TechCar. Abbiamo iniziato in un piccolo laboratorio, decisi a progettare un'autoradio che funzionasse davvero. Un sistema costruito da zero per un'integrazione perfetta con Apple CarPlay e Android Auto, che fosse veloce all'avvio e bello da vedere. <br>Oggi, quella visione si è trasformata in una linea completa di prodotti che definiscono lo standard per gli upgrade di infotainment, aiutando migliaia di guidatori a modernizzare i loro veicoli.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="container">
+                <h2>I nostri Servizi</h2>
+                
+                <p class="section-intro">Il nostro valore non risiede solo nel prodotto finito, ma nel processo ad alta tecnologia che lo crea. Ci occupiamo internamente dell'intero ciclo di vita dei nostri sistemi:</p>
+                
+                <div class="highlights-grid">
+                    <div class="card">
+                        <div class="card-image grayscale" style="background-image: url('images/service-1.jpg');"></div>
+                        <div class="card-content">
+                            <h3>Progettazione UX/UI e Integrazione Hardware</h3>
+                            <p>Non inseriamo semplicemente un tablet in un cruscotto. Il nostro primo servizio è la progettazione su misura...</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image grayscale" style="background-image: url('images/service-2.jpg');"></div>
+                        <div class="card-content">
+                            <h3>Sviluppo Software e Ottimizzazione</h3>
+                            <p>Questo è il cuore pulsante di TechCar. Sviluppiamo e ottimizziamo il software che anima i nostri dispositivi...</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image grayscale" style="background-image: url('images/service-3.jpg');"></div>
+                        <div class="card-content">
+                            <h3>Supporto e Aggiornamenti "Over-the-Air" (OTA)</h3>
+                            <p>Un prodotto TechCar non è mai obsoleto. A differenza delle autoradio tradizionali, i nostri sistemi "smart" sono progettati per evolversi...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="final-cta">
+            <div class="container">
+                <h2>Pronto a collaborare?</h2> 
+                <a href="contact.html" class="cta-button">Contattaci Ora</a> 
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer"> 
+        <div class="container">
+            <p>&copy; 2025 TechCar. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
